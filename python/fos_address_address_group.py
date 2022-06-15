@@ -15,10 +15,10 @@ if __name__ == "__main__":
 
     # Set credentials in enviroment or locally
     FORTIGATE_API_TOKEN = os.getenv(
-        "FORTIGATE_API_TOKEN", "ckGhjcbqy1c47jjgzj957sgktxwx15"
+        "FORTIGATE_API_TOKEN", "fortigate-api-token-goes-here-if-not-set-in-env"
     )
     FORTIGATE_URL = os.getenv(
-        "FORTIGATE_URL", "fortigate-url-goes-here"
+        "FORTIGATE_URL", "fortigate-url-goes-here-if-not-set-in-env"
     )  # E.g. https://10.10.10.10/
 
     headers = COMMON_HEADERS.copy()
