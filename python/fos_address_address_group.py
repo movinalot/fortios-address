@@ -36,9 +36,11 @@ if __name__ == "__main__":
             print("Checking if Address already exists...")
             response = requests.request(
                 "GET",
-                FORTIGATE_URL + "/api/v2/cmdb/firewall/address/" + address["AddressName"],
+                FORTIGATE_URL
+                + "/api/v2/cmdb/firewall/address/"
+                + address["AddressName"],
                 headers=headers,
-                verify=SSL_VERIFY
+                verify=SSL_VERIFY,
             )
             print(response.status_code)
             output = response.json()
@@ -58,7 +60,7 @@ if __name__ == "__main__":
                     FORTIGATE_URL + "/api/v2/cmdb/firewall/address",
                     headers=headers,
                     data=payload,
-                    verify=SSL_VERIFY
+                    verify=SSL_VERIFY,
                 )
 
                 print(response.status_code)
