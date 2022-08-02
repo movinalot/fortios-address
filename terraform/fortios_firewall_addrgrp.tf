@@ -6,7 +6,8 @@ resource "fortios_firewall_addrgrp" "firewall_addrgrp" {
   color         = local.firewall_addrgrps_common.color
   exclude       = local.firewall_addrgrps_common.exclude
   name          = local.firewall_addrgrps[count.index]
-  visibility    = local.firewall_addrgrps_common.visibility
+
+  dynamic_sort_subtable = true
 
   dynamic "member" {
     for_each = [
