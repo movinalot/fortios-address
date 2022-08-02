@@ -8,6 +8,5 @@ locals {
     allow_routing = "enable"
     color         = 0
     exclude       = "disable"
-    visibility    = "enable"
   }
 }
