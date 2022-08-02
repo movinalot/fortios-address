@@ -1,9 +1,9 @@
 variable "fortigate_ip_fqdn" {
-  type = string
+  type    = string
 }
 
 variable "fortigate_api_token" {
-  type = string
+  type    = string
 }
 
 variable "enable_module_output" {

@@ -14,13 +14,10 @@ resource "fortios_firewall_addrgrp" "firewall_addrgrp" {
       if address_group.groupname == local.firewall_addrgrps[count.index]
     ]
     content {
-      name = member.value.name
+      name = fortios_firewall_address.firewall_address[member.value.name].name
     }
   }
 
-  depends_on = [
-    fortios_firewall_address.firewall_address
-  ]
 }
 
 output "firewall_addrgrps" {

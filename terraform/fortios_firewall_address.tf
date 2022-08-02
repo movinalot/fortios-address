@@ -6,6 +6,10 @@ resource "fortios_firewall_address" "firewall_address" {
   subnet     = each.value.subnet
   type       = each.value.type
   visibility = each.value.visibility
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 output "firewall_addresses" {
