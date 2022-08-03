@@ -2,9 +2,9 @@ resource "fortios_firewall_address" "firewall_address" {
 
   for_each = local.firewall_addresses
 
-  name       = each.value.name
-  subnet     = each.value.subnet
-  type       = each.value.type
+  name   = each.value.name
+  subnet = each.value.subnet
+  type   = each.value.type
 
   dynamic_sort_subtable = true
 
