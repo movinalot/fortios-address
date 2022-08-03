@@ -6,8 +6,6 @@ resource "fortios_firewall_address" "firewall_address" {
   subnet = each.value.subnet
   type   = each.value.type
 
-  dynamic_sort_subtable = true
-
   lifecycle {
     create_before_destroy = true
   }
